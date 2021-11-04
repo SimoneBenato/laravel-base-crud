@@ -14,7 +14,8 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $comics = Comic::all();
+        return view('comics.index', compact('comics'));
     }
 
     /**
@@ -24,7 +25,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        // form per creazione singolo comic
+        return view('comics.create');
     }
 
     /**
@@ -35,7 +37,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // immagazzina singolo comic proveniente da form in create()
     }
 
     /**
@@ -45,8 +47,8 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Comic $comic)
-    {
-        //
+    {                         // ^
+        // mostra singolo comic  |
     }
 
     /**
@@ -56,8 +58,9 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Comic $comic)
-    {
-        //
+    {         
+        // mostra form per modifica singolo comic
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -68,8 +71,8 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Comic $comic)
-    {
-        //
+    {                         //  ^
+        // modifica singolo comic |
     }
 
     /**
@@ -79,7 +82,7 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Comic $comic)
-    {
-        //
+    {                         //  ^
+        // elimina singolo comic  |
     }
 }
