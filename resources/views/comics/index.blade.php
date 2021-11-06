@@ -1,7 +1,7 @@
 @foreach ($comics as $comic)
 <div>
     <div>
-        {{$comic->thumb}}
+        <img src="{{$comic->thumb}}" alt="">
     </div>
     <h3>{{$comic->title}}</h3>
     <p>{{$comic->description}}</p>
