@@ -34,7 +34,7 @@
                     <td>{{$comic->sale_date}}</td>
                     <td>{{$comic->type}}</td>
                     <td>
-                        <a class="btn btn-warning" href="#">Dettagli</a>
+                        <a class="btn btn-warning" href="{{route('comics.show', $comic['id'])}}">Dettagli</a>
                         <br>
                         <a class="btn btn-success" href="#">Modifica</a>
                         <br>

@@ -47,8 +47,8 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Comic $comic)
-    {                         // ^
-        // mostra singolo comic  |
+    {                         
+        return view('comics.show', compact('comic'));
     }
 
     /**
