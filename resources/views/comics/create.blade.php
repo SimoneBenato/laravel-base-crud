@@ -26,6 +26,11 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="thumb">Thumb Image</label>
+                        <input type="text" name="thumb" class="form-control" id="thumb" placeholder="Enter thumb">
+                    </div>
+
+                    <div class="form-group">
                         <label for="price">Price</label>
                         <input type="text" name="price" class="form-control" id="price" placeholder="Enter price">
                     </div>

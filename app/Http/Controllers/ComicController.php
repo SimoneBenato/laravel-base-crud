@@ -37,7 +37,11 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        // immagazzina singolo comic proveniente da form in create()
+        $tmp = $request->all();
+        $new_comic = new Comic();
+        $new_comic->fill($tmp);
+        $new_comic->save();
+        return redirect()->route('comics.index');
     }
 
     /**
