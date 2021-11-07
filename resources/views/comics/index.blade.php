@@ -10,6 +10,9 @@
 <body>
     @yield('navbar')
 
+    <a class="btn btn-primary my-4" href="{{route('comics.create')}}">Nuovo fumetto</a>
+
+
     <table class="table">
         <thead>
           <tr>
