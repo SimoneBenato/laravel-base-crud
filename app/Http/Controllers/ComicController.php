@@ -78,7 +78,7 @@ class ComicController extends Controller
     {                        
         $tmp = $request->all();
         $comic->update($tmp);
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.show', $comic['id']);
     }
 
     /**
@@ -88,7 +88,8 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Comic $comic)
-    {                         //  ^
-        // elimina singolo comic  |
+    {                         
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }

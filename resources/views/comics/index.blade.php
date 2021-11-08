@@ -41,7 +41,7 @@
                         <br>
                         <a class="btn btn-success" href="{{route('comics.edit', $comic['id'])}}">Modifica</a>
                         <br>
-                        <a class="btn btn-danger" href="#">Elimina</a>
+                        <a class="btn btn-danger" href="{{route('comics.destroy', $comic['id'])}}">Elimina</a>
                     </td>
                 </tr>
             @endforeach
