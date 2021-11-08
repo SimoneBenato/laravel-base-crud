@@ -75,8 +75,10 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Comic $comic)
-    {                         //  ^
-        // modifica singolo comic |
+    {                        
+        $tmp = $request->all();
+        $comic->update($tmp);
+        return redirect()->route('comics.index');
     }
 
     /**

@@ -39,7 +39,7 @@
                     <td class="d-flex">
                         <a class="btn btn-warning" href="{{route('comics.show', $comic['id'])}}">Dettagli</a>
                         <br>
-                        <a class="btn btn-success" href="#">Modifica</a>
+                        <a class="btn btn-success" href="{{route('comics.edit', $comic['id'])}}">Modifica</a>
                         <br>
                         <a class="btn btn-danger" href="#">Elimina</a>
                     </td>
